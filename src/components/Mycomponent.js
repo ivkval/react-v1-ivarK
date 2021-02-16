@@ -1,5 +1,7 @@
-import React from 'react';
+import Title from './Title';
 
-const Mycomponent = ({ title }) => <h1>My First Component {title}</h1>;
+const Mycomponent = ({ title }) => {
+  return <Title title={title} />;
+};
 
 export default Mycomponent;

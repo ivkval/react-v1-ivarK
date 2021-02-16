@@ -11,7 +11,7 @@ Add a "title" prop on MyComponent and make it render "It Works"
 Refactor the <h1> in MyComponent to be a <Title> component. It should render "It Works". Refactor means that the <h1> should live inside the newly created <Title> component
 
 // Lists
-Create an array const food = ['Pizza', 'Hamburger', 'Coke'];
+Create an array
 Render this list in App.js with array.map(). Remember to add a key.
 
 // Lists Component

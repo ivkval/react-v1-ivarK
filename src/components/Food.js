@@ -1,12 +1,10 @@
 import React from 'react';
 
-const Food = () => {
-  const food = ['Pizza', 'Hamburger', 'Coke'];
-
+const Food = ({ food }) => {
   return (
     <ul>
-      {food.map((food) => (
-        <li>{food}</li>
+      {food.map((food, index) => (
+        <li key={index}>{food}</li>
       ))}
     </ul>
   );
