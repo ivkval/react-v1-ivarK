@@ -4,10 +4,6 @@ import Food from './components/Food';
 import Wrapper from './components/Wrapper';
 import './styles.scss';
 
-function click() {
-  console.log('click');
-}
-
 const App = () => {
   const food = ['Pizza', 'Hamburger', 'Coke'];
 
@@ -16,17 +12,29 @@ const App = () => {
       <h1>The magic happens here</h1>
       <Mycomponent title={'It Works'} />
       <Food food={food} />
-      <button onClick={click}>Click</button>
-      <input />
+      <StateAndInput />
     </Wrapper>
-    /*
-      <>
-      <h1>The magic happens here</h1>
-      <Mycomponent title={'It Works'} />
-      <Food food={food}/>
-      </>
-      */
   );
 };
+
+function StateAndInput() {
+  let [input, setInput] = useState('');
+
+  function click() {
+    alert(input);
+    setInput('');
+  }
+
+  function change(e) {
+    setInput(e.target.value);
+  }
+
+  return (
+    <>
+      <button onClick={click}>Click</button>
+      <input autoFocus onChange={change} value={input} />
+    </>
+  );
+}
 
 export default App;
