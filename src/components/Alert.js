@@ -1,11 +1,14 @@
-const Alert = (props) => {
-  const change = (e) => props.onChange(e.target.value);
+import { useState } from 'react';
 
-  return (
-    <>
-      <input autoFocus onChange={change} />
-    </>
-  );
+const Alert = ({ propName, value }) => {
+  const [input, setInput] = useState('');
+
+  function newInput(event) {
+    setInput(event.target.value);
+    propName(input);
+  }
+
+  return <input autoFocus onChange={newInput} />;
 };
 
 export default Alert;

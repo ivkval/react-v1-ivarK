@@ -10,18 +10,22 @@ const App = () => {
 
   let [message, setMessage] = useState('');
 
-  const click = (fromInput) => {
+  function handler(newMessage) {
+    setMessage(newMessage);
+  }
+
+  function click() {
     alert(message);
     setMessage('');
-  };
+  }
 
   return (
     <Wrapper>
       <h1>The magic happens here</h1>
       <Mycomponent title={'It Works'} />
       <Food food={food} />
-      <Alert onChange={(value) => setMessage(value)} />
       <button onClick={click}>Click me</button>
+      <Alert propName={handler} />
     </Wrapper>
   );
 };
