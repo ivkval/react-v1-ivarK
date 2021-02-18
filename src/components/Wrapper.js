@@ -1,5 +1,5 @@
 const Wrapper = (props) => {
-  return <main className="flex">{props.children}</main>;
+  return <section className="flex">{props.children}</section>;
 };
 
 export default Wrapper;

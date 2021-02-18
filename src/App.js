@@ -8,16 +8,16 @@ import './styles.scss';
 const App = () => {
   const food = ['Pizza', 'Hamburger', 'Coke'];
 
-  let [message, setMessage] = useState('');
+  const [message, setMessage] = useState('');
 
-  function handler(newMessage) {
-    setMessage(newMessage);
-  }
+  const getMessage = (input) => {
+    setMessage(input);
+  };
 
-  function click() {
+  const click = () => {
     alert(message);
     setMessage('');
-  }
+  };
 
   return (
     <Wrapper>
@@ -25,7 +25,7 @@ const App = () => {
       <Mycomponent title={'It Works'} />
       <Food food={food} />
       <button onClick={click}>Click me</button>
-      <Alert propName={handler} />
+      <Alert getMessage={getMessage} value={message} />
     </Wrapper>
   );
 };
