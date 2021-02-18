@@ -22,7 +22,7 @@ const App = () => {
   return (
     <Wrapper>
       <h1>The magic happens here</h1>
-      <Mycomponent title={'It Works'} />
+      <Mycomponent title={'It Works Bæsj'} />
       <Food food={food} />
       <button onClick={click}>Click me</button>
       <Alert getMessage={getMessage} value={message} />
