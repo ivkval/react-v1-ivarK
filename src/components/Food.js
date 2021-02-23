@@ -1,11 +1,7 @@
 const Food = ({ food }) => {
-  return (
-    <ul>
-      {food.map((food, index) => (
-        <li key={index}>{food}</li>
-      ))}
-    </ul>
-  );
+  const getFood = food.map((item, index) => <li key={index}>{item}</li>);
+
+  return <ul>{getFood}</ul>;
 };
 
 export default Food;

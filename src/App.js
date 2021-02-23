@@ -8,24 +8,15 @@ import './styles.scss';
 const App = () => {
   const food = ['Pizza', 'Hamburger', 'Coke'];
 
-  const [message, setMessage] = useState('');
-
-  const getMessage = (input) => {
-    setMessage(input);
-  };
-
-  const click = () => {
-    alert(message);
-    setMessage('');
-  };
+  const [inputFromChild, setInputFromChild] = useState('');
 
   return (
     <Wrapper>
       <h1>The magic happens here</h1>
       <Mycomponent title={'It Works'} />
       <Food food={food} />
-      <button onClick={click}>Click me</button>
-      <Alert getMessage={getMessage} value={message} />
+      <Alert setInputFromChild={setInputFromChild} />
+      <p>{inputFromChild}</p>
     </Wrapper>
   );
 };
